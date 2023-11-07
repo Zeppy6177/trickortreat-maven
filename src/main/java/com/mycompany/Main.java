@@ -2,7 +2,7 @@ package com.mycompany;
 
 import java.util.Scanner;
 
-public class App {
+public class Main {
     public static String getUserInput(String msg, Scanner scanner) {
         if (msg != null) {
             System.out.println(msg);
