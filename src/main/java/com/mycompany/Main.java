@@ -29,8 +29,16 @@ public class Main {
 
         trickOrTreater.setName(getUserInput("What is your name?: ", scanner));
         trickOrTreater.setCostume(getUserInput("What are you dressed up as?: ", scanner));
-        housesToVisit = Integer.parseInt(getUserInput("How many house do you want to visit?", scanner));
 
-        trickOrTreater.trickOrTreat(housesToVisit);
+        while (true) {       
+            try {
+                housesToVisit = Integer.parseInt(getUserInput("How many house do you want to visit?", scanner));
+                trickOrTreater.trickOrTreat(housesToVisit);
+                break;
+            } catch (Exception e) {
+                System.out.println("Please enter a whole number.");
+            }
+        }
+
     }
 }
